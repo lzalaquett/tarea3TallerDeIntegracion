@@ -1,0 +1,11 @@
+@import "~leaflet/dist/leaflet.css";
+
+.mapa-en-si {
+  border-top: 10px;
+  border-color: #576363;
+}
+
+.leaflet-container {
+  width: 700px;
+  height: 400px;
+}
