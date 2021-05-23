@@ -4,30 +4,27 @@ import { SocketContext } from "../components/Socket";
 
 const MapContainer = ({ dataVuelos }) => {
     const socket = useContext(SocketContext);
-    const [_, setInfoVuelo] = useState({code: '0000000'});
     const [listaCodes, setListaCodes] = useState([]);
     const [flightsData, setFlightsData] = useState([]);
     const center = [-33.270374,-70.661969];
     const blueOptions = { color: 'blue' };
+    console.log('se reenderiza el contgainer del mapa');
 
     useEffect(() => {
-        socket.on('POSITION', handlePositionEvent)
-        return () => {socket.off();}
+        socket.on('POSITION', (data) => {
+            if (listaCodes.indexOf(data.code) === -1) {
+                setListaCodes([...listaCodes, data.code]);
+                setFlightsData([...flightsData, data]);
+            }
+            else {
+                let idx = listaCodes.indexOf(data.code);
+                let auxData = flightsData;
+                auxData[idx] = data;
+                setFlightsData(auxData);
+            }
+        })
+        return () => {socket.off('POSITION', '');}
     }, [flightsData]);
-
-    const handlePositionEvent = (data) => {
-        setInfoVuelo(data); 
-        if (listaCodes.indexOf(data.code) === -1) {
-            setListaCodes([...listaCodes, data.code]);
-            setFlightsData([...flightsData, data]);
-        }
-        else {
-            let idx = listaCodes.indexOf(data.code);
-            let auxData = flightsData;
-            auxData[idx] = data;
-            setFlightsData(auxData);
-        }
-    }
 
     return (
         <div>

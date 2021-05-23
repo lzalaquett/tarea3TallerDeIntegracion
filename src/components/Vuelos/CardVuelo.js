@@ -10,7 +10,7 @@ const CardVuelo = ({ info }) => (
         <h3>{info.seats} asientos</h3>
         <ul>
         {info.passengers.map((passenger, idx) => (
-            <li>{passenger.name}, edad: {passenger.age}</li>
+            <li key={`${idx}-pasajeros`}>{passenger.name}, edad: {passenger.age}</li>
         ))}
         </ul>
     </Card> 

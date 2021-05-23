@@ -10,14 +10,12 @@ const ChatContainer = () => {
     const [logueado, setLogueado] = useState(false);
 
     useEffect(() => {
-        socket.on('CHAT', handleChatEvent)
-        return () => {socket.off();}
+        socket.on('CHAT', (data) => {
+            console.log('antes:', chatMsg)
+            setChatMsg([...chatMsg, data]); 
+            console.log('despues:', chatMsg)})
+        return () => {socket.off('CHAT', '');}
     }, [chatMsg]);
-
-    const handleChatEvent = (data) => {
-        setChatMsg([...chatMsg, data]); 
-        console.log(data);
-    }
 
     const handleLogin = (values) => {
         console.log('Success:', values);
@@ -28,6 +26,7 @@ const ChatContainer = () => {
     const handleMsg = (values) => {
         console.log('Success:', values);
         socket.emit('CHAT', {name: userName, message: values.message});
+
     }
 
     return (

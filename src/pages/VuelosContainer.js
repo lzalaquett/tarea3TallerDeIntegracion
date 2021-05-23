@@ -12,6 +12,7 @@ const VuelosContainer = ({vuelos, setVuelos }) => {
             setVuelos(data);
             console.log(vuelos);
         })
+        return () => {socket.off('FLIGHTS');}
     }
 
     return (

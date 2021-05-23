@@ -6,6 +6,7 @@ import socket, { SocketContext } from "./components/Socket/index";
 import './App.css';
 import ChatContainer from './pages/ChatContainer';
 import VuelosContainer from './pages/VuelosContainer';
+import { Footer } from 'antd/lib/layout/layout';
 
 
 const App = () => {
@@ -31,6 +32,9 @@ const App = () => {
               setVuelos={setVuelos}
             />
           </div>
+        </div>
+        <div>
+          <Footer style={{ textAlign: 'center' }}>Creado por Lucas Zalaquett para la tarea 3 de taller de integración</Footer>
         </div>
       </div>
     </SocketContext.Provider>
