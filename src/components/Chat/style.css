@@ -2,3 +2,7 @@
   border-top: 10px;
   border-color: #576363;
 }
+
+.self-msg {
+  color: red;
+}
