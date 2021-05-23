@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tarea3TallerDeIntegracion/static/css/main.bdef6733.chunk.css",
+    "main.js": "/tarea3TallerDeIntegracion/static/js/main.bad1ac32.chunk.js",
+    "main.js.map": "/tarea3TallerDeIntegracion/static/js/main.bad1ac32.chunk.js.map",
+    "runtime-main.js": "/tarea3TallerDeIntegracion/static/js/runtime-main.57dd7091.js",
+    "runtime-main.js.map": "/tarea3TallerDeIntegracion/static/js/runtime-main.57dd7091.js.map",
+    "static/css/2.e5a698cd.chunk.css": "/tarea3TallerDeIntegracion/static/css/2.e5a698cd.chunk.css",
+    "static/js/2.0312fadf.chunk.js": "/tarea3TallerDeIntegracion/static/js/2.0312fadf.chunk.js",
+    "static/js/2.0312fadf.chunk.js.map": "/tarea3TallerDeIntegracion/static/js/2.0312fadf.chunk.js.map",
+    "static/js/3.99898a78.chunk.js": "/tarea3TallerDeIntegracion/static/js/3.99898a78.chunk.js",
+    "static/js/3.99898a78.chunk.js.map": "/tarea3TallerDeIntegracion/static/js/3.99898a78.chunk.js.map",
+    "index.html": "/tarea3TallerDeIntegracion/index.html",
+    "static/css/2.e5a698cd.chunk.css.map": "/tarea3TallerDeIntegracion/static/css/2.e5a698cd.chunk.css.map",
+    "static/css/main.bdef6733.chunk.css.map": "/tarea3TallerDeIntegracion/static/css/main.bdef6733.chunk.css.map",
+    "static/js/2.0312fadf.chunk.js.LICENSE.txt": "/tarea3TallerDeIntegracion/static/js/2.0312fadf.chunk.js.LICENSE.txt",
+    "static/media/airplane.svg": "/tarea3TallerDeIntegracion/static/media/airplane.0319f624.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57dd7091.js",
+    "static/css/2.e5a698cd.chunk.css",
+    "static/js/2.0312fadf.chunk.js",
+    "static/css/main.bdef6733.chunk.css",
+    "static/js/main.bad1ac32.chunk.js"
+  ]
+}
