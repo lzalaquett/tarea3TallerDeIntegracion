@@ -23,22 +23,6 @@ const App = () => {
             <ChatContainer/>
           </div>
         </div>
-        
-        <br/>
-        <hr/>
-        <div className="mapa container">
-          <div className="mapa components">
-            <h3>aca va el mapa</h3>
-          </div>
-          <div className="info de vajes components">
-            <h3>aca va la info de viajes</h3>
-          </div>
-        </div>
-        <div className="chat container">
-          <div className="chat components">
-            <h3>aca va el chat</h3>
-          </div>
-        </div>
       </div>
     </SocketContext.Provider>
     
