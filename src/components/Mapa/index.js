@@ -11,15 +11,18 @@ const MapaBoard = ({ center, dataVuelos, positions, options }) => (
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
         />
-        {/*positions.map((plane, idx) => (
-          <Marker key={`${idx}-markers`} position={plane.position} icon={ MarkerPlane }>
+        {positions.map((plane, idx) => (
+          <Marker key={`${idx}-markers`} position={[plane.position[0], plane.position[1]]} icon={MarkerPlane}>
             <Tooltip>{plane.code}</Tooltip>
           </Marker>
-        ))*/}
+        ))}
         {dataVuelos.map((data, idx) => (
           <Polyline key={`${idx}-lineas`} pathOptions={options} positions={[data.origin, data.destination]} />
         ))}
       </MapContainer>
+        {positions.map((plane, idx) => (
+          <p key={`${idx}-markers`}>{plane.code}{plane.position}</p>
+        ))}
     </Card>
 );
 

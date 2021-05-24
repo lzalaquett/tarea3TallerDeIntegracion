@@ -1,8 +1,8 @@
 import L from 'leaflet';
 
 const MarkerPlane = new L.Icon({
-    iconUrl: require('./airplane.svg'),
-    iconRetinaUrl: require('./airplane.svg'),
+    iconUrl: require('./avion.png'),
+    iconRetinaUrl: require('./avion.png'),
     iconAnchor: null,
     popupAnchor: null,
     shadowUrl: null,
