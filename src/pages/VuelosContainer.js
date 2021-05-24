@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import MapaBoard from "../components/Mapa/index";
+import React, { useContext } from "react";
 import { SocketContext } from "../components/Socket";
 import VuelosBoard from "../components/Vuelos";
 

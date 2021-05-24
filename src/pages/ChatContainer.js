@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import ChatBoard from "../components/Chat";
 import { Form } from "antd";
-import LogForm from "../components/Chat/LogForm";
 import { SocketContext } from "../components/Socket";
 
 const ChatContainer = () => {

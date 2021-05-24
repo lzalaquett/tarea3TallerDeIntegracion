@@ -1,7 +1,6 @@
 import { Card } from "antd";
 import React from "react";
-import { MapContainer, TileLayer, Marker, Polyline, Tooltip, Circle, CircleMarker } from 'react-leaflet'
-import { MarkerPlane } from "../../assets/Marker";
+import { MapContainer, TileLayer, Polyline, Tooltip, CircleMarker } from 'react-leaflet'
 import "./style.css";
 
 const MapaBoard = ({ center, dataVuelos, positions, options, options2 }) => (

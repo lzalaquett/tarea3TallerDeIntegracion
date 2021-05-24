@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import MapaBoard from "../components/Mapa/index";
 import { SocketContext } from "../components/Socket";
-import VuelosBoard from "../components/Vuelos";
 
 const MapContainer = ({ vuelos }) => {
     const socket = useContext(SocketContext);

@@ -9,13 +9,6 @@ const Header = () => (
             onBack={() => window.history.back()}
             title="Fly Traker"
             subTitle="have everything under control in one place"
-            extra={[
-        <Button key="3">Operation</Button>,
-        <Button key="2">Operation</Button>,
-        <Button key="1" type="primary">
-          Primary
-        </Button>,
-      ]}
     >
       <Descriptions size="small" column={3}>
         <Descriptions.Item label="Created">Lucas Zalaquett</Descriptions.Item>

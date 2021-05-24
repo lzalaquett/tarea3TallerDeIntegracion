@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import HeaderContainer from './pages/HeaderContainer';
 import MapContainer from './pages/MapContainer';
 import socket, { SocketContext } from "./components/Socket/index";
