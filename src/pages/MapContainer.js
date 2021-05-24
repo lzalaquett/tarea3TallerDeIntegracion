@@ -10,6 +10,7 @@ const MapContainer = ({ vuelos }) => {
     const [flightsData, setFlightsData] = useState([{code:'000', position: [0,0]}]);
     const center = [-33.270374,-70.661969];
     const blueOptions = { color: 'blue' };
+    const blackOptions = { color: 'red' };
 
     useEffect(() => {
         socket.on('POSITION', (data) => {
@@ -33,6 +34,7 @@ const MapContainer = ({ vuelos }) => {
             <MapaBoard
                 center={center}
                 options={blueOptions}
+                options2={blackOptions}
                 positions={flightsData}
                 dataVuelos={vuelos}
             />

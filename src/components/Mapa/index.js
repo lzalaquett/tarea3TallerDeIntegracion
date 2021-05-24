@@ -1,23 +1,27 @@
 import { Card } from "antd";
 import React from "react";
-import { MapContainer, TileLayer, Marker, Polyline, Tooltip, Circle } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Polyline, Tooltip, Circle, CircleMarker } from 'react-leaflet'
 import { MarkerPlane } from "../../assets/Marker";
 import "./style.css";
 
-const MapaBoard = ({ center, dataVuelos, positions, options }) => (
+const MapaBoard = ({ center, dataVuelos, positions, options, options2 }) => (
     <Card title="Mapa" id="mapacard">
       <MapContainer center={center} zoom={4} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
         />
-        {positions.map((plane, idx) => (
-          <Marker key={`${idx}-markers`} position={[plane.position[0], plane.position[1]]} icon={MarkerPlane}>
-            <Tooltip>{plane.code}</Tooltip>
-          </Marker>
-        ))}
         {dataVuelos.map((data, idx) => (
-          <Polyline key={`${idx}-lineas`} pathOptions={options} positions={[data.origin, data.destination]} />
+          <Polyline key={`${idx}-lineas`} pathOptions={options2} positions={[data.origin, data.destination]} />
+        ))}
+        {positions.map((plane, idx) => (
+          <CircleMarker
+            key={`${idx}-markers`}
+            center={[plane.position[0], plane.position[1]]}
+            pathOptions={options}
+            radius={10}>
+            <Tooltip>{plane.code}</Tooltip>
+          </CircleMarker>
         ))}
       </MapContainer>
     </Card>
