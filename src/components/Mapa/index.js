@@ -5,7 +5,7 @@ import { MarkerPlane } from "../../assets/Marker";
 import "./style.css";
 
 const MapaBoard = ({ center, dataVuelos, positions, options }) => (
-    <Card title="Mapa" id="mapa-card">
+    <Card title="Mapa" id="mapacard">
       <MapContainer center={center} zoom={4} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

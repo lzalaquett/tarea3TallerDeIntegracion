@@ -3,8 +3,23 @@
   border-color: #576363;
 }
 
+.other-msg {
+  padding: 10px;
+  background-color: #dddddd;
+  width: 400px;
+  align-self: center;
+}
+
 .self-msg {
-  color: red;
+  padding: 10px;
+  background-color: #dddddd;
+  text-align: right;
+  width: 400px;
+  margin-left: 105px;
+}
+
+.self-msg-username {
+  text-align: right;
 }
 
 #chat-card {

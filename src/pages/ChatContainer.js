@@ -11,9 +11,8 @@ const ChatContainer = () => {
 
     useEffect(() => {
         socket.on('CHAT', (data) => {
-            console.log('antes:', chatMsg)
-            setChatMsg([...chatMsg, data]); 
-            console.log('despues:', chatMsg)})
+            setChatMsg([...chatMsg, data]);
+        })
         return () => {socket.off('CHAT', '');}
     }, [chatMsg]);
 

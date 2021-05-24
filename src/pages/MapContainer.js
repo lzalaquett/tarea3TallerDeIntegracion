@@ -6,7 +6,7 @@ import VuelosBoard from "../components/Vuelos";
 const MapContainer = () => {
     const socket = useContext(SocketContext);
     const [vuelos, setVuelos] = useState([]);
-    const [listaCodes, setListaCodes] = useState(['']);
+    const [listaCodes, setListaCodes] = useState([]);
     const [flightsData, setFlightsData] = useState([{}]);
     const center = [-33.270374,-70.661969];
     const blueOptions = { color: 'blue' };
@@ -30,7 +30,7 @@ const MapContainer = () => {
             }
         })
         return () => {socket.off('POSITION');}
-    }, []);
+    }, [flightsData]);
 
     const handleClickfuncion = (e) => {
         socket.emit('FLIGHTS', '');
@@ -52,6 +52,7 @@ const MapContainer = () => {
             <VuelosBoard
                 data={vuelos}
                 handleClick={handleClickfuncion}
+                positions={flightsData}
             />
         </div>
     );

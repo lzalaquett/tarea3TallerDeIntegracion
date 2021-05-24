@@ -14,7 +14,10 @@ const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg })
         <div className="chat-en-si">
           <div className='mensajes-box'>
             {mensajes.map((mensaje, idx) => (
-              <p key={`${idx}-m`} className={mensaje.name === userName ? 'self-msg' : 'other-msg'}>{mensaje.name} at {mensaje.date}: {mensaje.message}</p>
+              <div>
+                <h5 className={mensaje.name === userName ? 'self-msg-username' : 'other-msg-username'}>{mensaje.name} a las {mensaje.date}: </h5>
+                <p key={`${idx}-m`} className={mensaje.name === userName ? 'self-msg' : 'other-msg'}>{mensaje.message}</p>
+              </div>
             ))}
           </div>
           <div className='input-form'>
