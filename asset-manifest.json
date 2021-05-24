@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/tarea3TallerDeIntegracion/static/css/main.e79274c4.chunk.css",
-    "main.js": "/tarea3TallerDeIntegracion/static/js/main.588eea48.chunk.js",
-    "main.js.map": "/tarea3TallerDeIntegracion/static/js/main.588eea48.chunk.js.map",
+    "main.css": "/tarea3TallerDeIntegracion/static/css/main.8a7fea74.chunk.css",
+    "main.js": "/tarea3TallerDeIntegracion/static/js/main.f0596233.chunk.js",
+    "main.js.map": "/tarea3TallerDeIntegracion/static/js/main.f0596233.chunk.js.map",
     "runtime-main.js": "/tarea3TallerDeIntegracion/static/js/runtime-main.d63ebbd4.js",
     "runtime-main.js.map": "/tarea3TallerDeIntegracion/static/js/runtime-main.d63ebbd4.js.map",
     "static/css/2.e5a698cd.chunk.css": "/tarea3TallerDeIntegracion/static/css/2.e5a698cd.chunk.css",
-    "static/js/2.7f68b676.chunk.js": "/tarea3TallerDeIntegracion/static/js/2.7f68b676.chunk.js",
-    "static/js/2.7f68b676.chunk.js.map": "/tarea3TallerDeIntegracion/static/js/2.7f68b676.chunk.js.map",
+    "static/js/2.a33d7233.chunk.js": "/tarea3TallerDeIntegracion/static/js/2.a33d7233.chunk.js",
+    "static/js/2.a33d7233.chunk.js.map": "/tarea3TallerDeIntegracion/static/js/2.a33d7233.chunk.js.map",
     "static/js/3.e7ee5e67.chunk.js": "/tarea3TallerDeIntegracion/static/js/3.e7ee5e67.chunk.js",
     "static/js/3.e7ee5e67.chunk.js.map": "/tarea3TallerDeIntegracion/static/js/3.e7ee5e67.chunk.js.map",
     "index.html": "/tarea3TallerDeIntegracion/index.html",
     "static/css/2.e5a698cd.chunk.css.map": "/tarea3TallerDeIntegracion/static/css/2.e5a698cd.chunk.css.map",
-    "static/css/main.e79274c4.chunk.css.map": "/tarea3TallerDeIntegracion/static/css/main.e79274c4.chunk.css.map",
-    "static/js/2.7f68b676.chunk.js.LICENSE.txt": "/tarea3TallerDeIntegracion/static/js/2.7f68b676.chunk.js.LICENSE.txt",
+    "static/css/main.8a7fea74.chunk.css.map": "/tarea3TallerDeIntegracion/static/css/main.8a7fea74.chunk.css.map",
+    "static/js/2.a33d7233.chunk.js.LICENSE.txt": "/tarea3TallerDeIntegracion/static/js/2.a33d7233.chunk.js.LICENSE.txt",
     "static/media/avion.png": "/tarea3TallerDeIntegracion/static/media/avion.0edbe88f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d63ebbd4.js",
     "static/css/2.e5a698cd.chunk.css",
-    "static/js/2.7f68b676.chunk.js",
-    "static/css/main.e79274c4.chunk.css",
-    "static/js/main.588eea48.chunk.js"
+    "static/js/2.a33d7233.chunk.js",
+    "static/css/main.8a7fea74.chunk.css",
+    "static/js/main.f0596233.chunk.js"
   ]
 }
