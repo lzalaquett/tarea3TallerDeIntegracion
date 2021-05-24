@@ -28,10 +28,9 @@
 
 .mensajes-box {
   height: 500px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .input-form {
-  display: grid;
-  grid-column: auto auto;
+  margin-left: 220px;
 }

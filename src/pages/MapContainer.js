@@ -3,9 +3,8 @@ import MapaBoard from "../components/Mapa/index";
 import { SocketContext } from "../components/Socket";
 import VuelosBoard from "../components/Vuelos";
 
-const MapContainer = () => {
+const MapContainer = ({ vuelos }) => {
     const socket = useContext(SocketContext);
-    const [vuelos, setVuelos] = useState([]);
     const [listaCodes, setListaCodes] = useState([]);
     const [_, setInfoVuelo] = useState({code: '0000000'});
     const [flightsData, setFlightsData] = useState([{code:'000', position: [0,0]}]);
@@ -27,16 +26,7 @@ const MapContainer = () => {
             }
         })
         return () => {socket.off('POSITION');}
-    }, [flightsData]);
-
-    const handleClickfuncion = (e) => {
-        socket.emit('FLIGHTS', '');
-        socket.on('FLIGHTS', (data) => {
-            setVuelos(data);
-            console.log(vuelos);
-        })
-        return () => {socket.off('FLIGHTS');}
-    }
+    }, [flightsData, listaCodes]);
 
     return (
         <div>
@@ -45,11 +35,6 @@ const MapContainer = () => {
                 options={blueOptions}
                 positions={flightsData}
                 dataVuelos={vuelos}
-            />
-            <VuelosBoard
-                data={vuelos}
-                handleClick={handleClickfuncion}
-                positions={flightsData}
             />
         </div>
     );

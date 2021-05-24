@@ -5,7 +5,7 @@ import "./style.css";
 
 const VuelosBoard = ({ data, handleClick }) => (
     <Card title="Vuelos">
-        <Button onClick={handleClick}>cargar vuelos</Button>
+        <Button onClick={handleClick} className="btn-cargar">cargar vuelos</Button>
         <Row>
         {data.map((vuelo, idx) => (
             <CardVuelo

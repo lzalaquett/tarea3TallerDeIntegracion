@@ -1,10 +1,29 @@
-import { Card, Input, Form, Button, Layout } from "antd";
-import { Content, Footer, Header } from "antd/lib/layout/layout";
-import React from "react";
+import { Card, Input, Form, Button } from "antd";
+import React, { useEffect, useRef } from "react";
 import LogForm from "./LogForm";
 import "./style.css";
 
-const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg }) => (
+const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg }) => {
+  const messageEl = useRef(null);  
+  const [form] = Form.useForm();
+
+  useEffect(() => {
+    if (messageEl) {
+      if (messageEl.current){
+        messageEl.current.addEventListener('DOMNodeInserted', event => {
+          const { currentTarget: target } = event;
+          target.scroll({ top: target.scrollHeight, behavior: 'smooth' });
+        });
+      }
+    }
+  }, [])
+
+
+  const onReset = (values) => {
+    handleMsg(values)
+    form.resetFields();
+  };
+  return (
     <Card title="Chat" id='chat-card'>
       {!isLogueado ?
         <LogForm
@@ -12,7 +31,7 @@ const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg })
             handlesubbmit={handlesubbmit}
         /> : 
         <div className="chat-en-si">
-          <div className='mensajes-box'>
+          <div className='mensajes-box' ref={messageEl}>
             {mensajes.map((mensaje, idx) => (
               <div>
                 <h5 className={mensaje.name === userName ? 'self-msg-username' : 'other-msg-username'}>{mensaje.name} a las {mensaje.date}: </h5>
@@ -22,24 +41,29 @@ const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg })
           </div>
           <div className='input-form'>
             <Form
+              form={form}
               name="basic"
-              onFinish={handleMsg}
+              onFinish={onReset}
+              layout="inline"
+              allowClear
             >
               <Form.Item
                 name="message"
+                className='input.fild'
               >
                 <Input placeholder='escribe un mensaje'/>
+                
               </Form.Item>
 
               <Form.Item>
-                <Button type="primary" htmlType="submit">
-                  Submit
+                <Button type="secondary" htmlType="submit">
+                  Send
                 </Button>
               </Form.Item>
             </Form>
           </div>
         </div>}
     </Card>
-);
+)};
 
 export default ChatBoard;

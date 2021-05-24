@@ -1,4 +1,6 @@
 .card-vuelo {
-  margin: 10px;
-  background-color: #e7e7e7;
+  background-color: #f5f5f5;
+}
+.btn-cargar {
+  margin-left: 15px;
 }

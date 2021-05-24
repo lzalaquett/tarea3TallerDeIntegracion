@@ -20,9 +20,6 @@ const MapaBoard = ({ center, dataVuelos, positions, options }) => (
           <Polyline key={`${idx}-lineas`} pathOptions={options} positions={[data.origin, data.destination]} />
         ))}
       </MapContainer>
-        {positions.map((plane, idx) => (
-          <p key={`${idx}-markers`}>{plane.code}{plane.position}</p>
-        ))}
     </Card>
 );
 
