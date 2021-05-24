@@ -8,13 +8,11 @@ const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg })
   const [form] = Form.useForm();
 
   useEffect(() => {
-    if (messageEl) {
-      if (messageEl.current){
+    if (messageEl.current) {
         messageEl.current.addEventListener('DOMNodeInserted', event => {
           const { currentTarget: target } = event;
           target.scroll({ top: target.scrollHeight, behavior: 'smooth' });
         });
-      }
     }
   }, [])
 
@@ -25,20 +23,19 @@ const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg })
   };
   return (
     <Card title="Chat" id='chat-card'>
-      {!isLogueado ?
-        <LogForm
-            userName={userName}
-            handlesubbmit={handlesubbmit}
-        /> : 
-        <div className="chat-en-si">
-          <div className='mensajes-box' ref={messageEl}>
-            {mensajes.map((mensaje, idx) => (
+    <div className='mensajes-box' ref={messageEl}>{isLogueado &&
+            mensajes.map((mensaje, idx) => (
               <div>
                 <h5 className={mensaje.name === userName ? 'self-msg-username' : 'other-msg-username'}>{mensaje.name} a las {mensaje.date}: </h5>
                 <p key={`${idx}-m`} className={mensaje.name === userName ? 'self-msg' : 'other-msg'}>{mensaje.message}</p>
               </div>
             ))}
-          </div>
+            </div>
+      {!isLogueado ?
+        <LogForm
+            userName={userName}
+            handlesubbmit={handlesubbmit}
+        /> : 
           <div className='input-form'>
             <Form
               form={form}
@@ -61,8 +58,7 @@ const ChatBoard = ({ mensajes, userName, handlesubbmit, isLogueado, handleMsg })
                 </Button>
               </Form.Item>
             </Form>
-          </div>
-        </div>}
+          </div>}
     </Card>
 )};
 

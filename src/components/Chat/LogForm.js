@@ -9,6 +9,7 @@ const LogForm = ({ userName, handlesubbmit }) => (
         <Form 
             name="basic"
             onFinish={handlesubbmit}
+            layout="inline"
         >
             <Form.Item
                 label="Username"
