@@ -10,8 +10,10 @@ import { Footer } from 'antd/lib/layout/layout';
 
 
 const App = () => {
-
-  const [vuelos, setVuelos] = useState([]);
+  console.log("SE REnderiza app");
+  useEffect(()=>{
+    console.log("SE REnderiza app");
+  })
 
   return (
     <SocketContext.Provider value={socket}>
@@ -19,18 +21,12 @@ const App = () => {
         <HeaderContainer/>
         <div className="body">
           <div className="map-container">
-            <MapContainer
-              dataVuelos={vuelos}
-              />
+            <MapContainer/>
           </div>
           <div className="chat-container">
             <ChatContainer/>
           </div>
           <div className="vuelos-container">
-            <VuelosContainer
-              vuelos={vuelos}
-              setVuelos={setVuelos}
-            />
           </div>
         </div>
         <div>

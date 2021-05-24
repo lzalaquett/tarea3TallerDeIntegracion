@@ -6,3 +6,17 @@
 .self-msg {
   color: red;
 }
+
+#chat-card {
+  height: 700px;
+}
+
+.mensajes-box {
+  height: 500px;
+  overflow: scroll;
+}
+
+.input-form {
+  display: grid;
+  grid-column: auto auto;
+}
